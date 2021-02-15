@@ -12,12 +12,16 @@
 
     .main-header-logo {
         width: 20%;
-        padding: 0 5px;
+        padding: 0 ;
+        margin: 0;
         border-radius: 5px;
-        box-shadow: 4px 4px 2px @line;
+        box-shadow: 4px 4px 2px @shadow;
         transition: 0.4s;
 
         &__link {
+            margin: 0;
+            padding: 0;
+
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -29,80 +33,163 @@
 
             &_txt {
                 font-size: 24px;
+                font-family: 'Comfortaa';
+                font-weight: 700;
             }
         }
     }
 
     .main-header-logo:hover {
-        box-shadow: inset 4px 4px 2px @line;
+        box-shadow: inset 4px 4px 2px @shadow;
     }
 
     & .main-header-nav {
-        width: 55%;
+        width: 60%;
         margin: 0;
         padding: 0;
-        margin-left: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &__items {
+            width: 100%;
+        }
+        
 
         &__links {
+            padding: 0;
             display: flex;
+            justify-content: space-around;
+            .select {
+                &__selectlink {
+                    position: relative;
+                    display: inline-block;
+                    width: 150px;
+                    text-align: left;
+                    // margin: 10px;
+                    ul {
+                        display: none;
+                        box-sizing: border-box;
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: auto;
+                        max-height: 200px;
+                        position: absolute;
+                        top: 100%;
+                        left: 0px; 
+                        border: 1px solid #dadada;
+                        border-radius: 5px;
+                        border-top: none;
+                        background: @fon;
+                        z-index: 9999;
+                        overflow: auto;
+                        user-select: none;
+                    }	
+
+                    li {
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+
+                        & a {
+                            position: relative;
+                            display: block;
+                            margin: 0;
+                            padding: 5px 6px 4px 15px;
+                            font-family: 'Comfortaa';
+                            font-weight: normal;
+                            
+                            line-height: 1.1;
+                            cursor: pointer;
+                            text-decoration: none;
+                            color: #000;
+                        }	
+                        
+                        & a:hover {
+                            background: @hover;
+                            color: #fff;
+                        }
+                    }
+                    .selectlink-control {
+                        position: relative;
+                        font-family: "Comfortaa";
+                        
+                        cursor: pointer;
+                    }
+                    .selectlink-control::after {
+                        content: '';
+                        border: 5px solid transparent;
+                        border-top: 5px solid #999;
+                        position: absolute;
+                        top: 50%;
+                        right: 15px;
+                        margin-top: -3px;
+                    }
+                }
+            }
 
             &_link {
                 padding: 5px 5px;
                 border-radius: 5px;
-                box-shadow: 4px 4px 2px @line;
+                box-shadow: 4px 4px 2px @shadow;
                 transition: 0.4s;
 
                 a {
                     font-family: "Comfortaa";
+                    
                 }
             }
 
             &_link:hover {
-                box-shadow: inset 4px 4px 2px @line;
+                box-shadow: inset 4px 4px 2px @shadow;
             }
 
-            li+li {
-                margin-left: 20px;
-            }
+            
         }
     }
 
-    & .main-header-searh {
-        width: 25%;
+    & .main-header-phone {
+        width: 20%;
 
         &__user {
             margin: 0;
             padding: 0;
             display: flex;
+            justify-content: space-around;
             align-items: baseline;
 
             &_item {
                 width: 25px;
+
             }
 
             &_phone {
-                font-size: 1.7vw;
+                
 
                 a {
                     font-family: "Comfortaa";
                     font-weight: 700;
+                    font-size: 20px;
                 }
             }
 
             li {
                 padding: 5px 5px;
                 border-radius: 5px;
-                box-shadow: 4px 4px 2px @line;
+                box-shadow: 4px 4px 2px @shadow;
                 transition: 0.4s;
             }
 
             li:hover {
-                box-shadow: inset 4px 4px 2px @line;
+                box-shadow: inset 4px 4px 2px @shadow;
             }
 
-            li+li {
-                margin-left: 20px;
-            }
+           
         }
     }
+}
+@media screen and (max-width: 700px) {
+	.body_pointer {
+		cursor: pointer;
+	}
 }

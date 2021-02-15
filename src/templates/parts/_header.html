@@ -1,5 +1,5 @@
-<header class="wrapper ">
-  <div class="main-header">
+<header class="">
+  <div class="main-header wrapper ">
     <div class="main-header-logo">
         <a href="index.html" class="main-header-logo__link">
           <img src="/img/logo.png" alt="" />
@@ -10,8 +10,19 @@
       <div class="main-header-nav">
         <nav class="main-header-nav__items">
           <ul class="main-header-nav__links ul-reset">
-            <li class="main-header-nav__links_link">
-              <a href="#mat">Материалы</a>
+            <li class="main-header-nav__links_link select">
+              <div class="select__selectlink"> 
+                <div class="selectlink-control">Материалы</div>
+                <ul>
+                  <li><a href="">Щебень</a></li>
+                  <li><a href="">Песок</a></li>
+                  <li><a href="">ЩПС</a></li>
+                  <li><a href="">ПГС</a></li>
+                  <li><a href="">Отсев</a></li>
+                  <li><a href="">Керамзит</a></li>
+                  
+                </ul>
+              </div>
             </li>
             <li class="main-header-nav__links_link">
               <a href="#">Доставка и оплата</a>
@@ -22,17 +33,18 @@
             <li class="main-header-nav__links_link">
               <a href="#">Вакансии</a>
             </li>
+            
           </ul>
         </nav>
       </div>
     
-      <div class="main-header-searh">
-        <nav class="main-header-searh__items">
-          <ul class="main-header-searh__user ul-reset">
-            <li class="main-header-searh__user_item">
+      <div class="main-header-phone">
+        <nav class="main-header-phone__items">
+          <ul class="main-header-phone__user ul-reset">
+            <li class="main-header-phone__user_item">
               <a href="#">{% include 'parts/svgo/ico-phone.svg' %}</a>
             </li>
-            <li class="main-header-searh__user_phone">
+            <li class="main-header-phone__user_phone">
               <a href="tel:+74951234567"> +7(495) 123-45-67 </a>
             </li>
             
