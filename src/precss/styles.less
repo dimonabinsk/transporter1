@@ -1,6 +1,12 @@
-@import 'libs/smart-grid.less';
-@import 'libs/vars.less';
-@import 'libs/mixins.less';
+@import "libs/smart-grid.less";
+@import "libs/vars.less";
+@import "libs/mixins.less";
+@import "libs/_header.less";
+@import "libs/_banner.less";
+@import "libs/_work.less";
+@import "libs/_material.less";
+@import "libs/_foot.less";
+@import (inline) "../../node_modules/animate.css/animate.min.css";
 
 @font-face {
 	font-family: 'Comfortaa';
@@ -58,6 +64,7 @@
 	font-style: normal;
 
 }
+
 @font-face {
 	font-family: 'Benne';
 	src: url('../fonts/Benne-Regular.eot');
@@ -70,15 +77,6 @@
 
 
 
-@import (inline) "../../node_modules/animate.css/animate.min.css";
-@import "../../node_modules/slick-carousel/slick/slick.less";
-@import 'libs/_header.less';
-@import 'libs/_banner.less';
-@import 'libs/_work.less';
-@import 'libs/_material.less';
-@import 'libs/_foot.less';
-
-
 
 
 /* Set defaults */
@@ -86,9 +84,14 @@
 html,
 body {
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-	background-color: @fon;
-	
+	// background-color: @fon;
+	background: rgb(235, 240, 166);
+	background: -moz-radial-gradient(circle, rgba(235, 240, 166, 1) 0%, rgba(226, 229, 232, 1) 100%);
+	background: -webkit-radial-gradient(circle, rgba(235, 240, 166, 1) 0%, rgba(226, 229, 232, 1) 100%);
+	background: radial-gradient(circle, rgba(235, 240, 166, 1) 0%, rgba(226, 229, 232, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ebf0a6", endColorstr="#e2e5e8", GradientType=1);
 }
 
 *,
@@ -98,13 +101,13 @@ body {
 }
 
 body {
-	font-family: 'futura_bk_btbook', 'Montserrat', 'Open Sans', 'Arial', sans-serif;
+	font-family: 'Montserrat', 'Open Sans', 'Arial', sans-serif;
 	max-width: 1920px;
 	margin: 0 auto;
 	font-size: 16px;
 	font-weight: @fontNormal;
 	line-height: 1.2;
-	
+
 }
 
 .btn-reset {
@@ -221,7 +224,7 @@ a {
 /* General */
 
 .wrapper {
-    margin: 0;
+	margin: 0;
 }
 
 .line {

@@ -1,55 +1,57 @@
-<header class="">
-  <div class="main-header wrapper ">
-    <div class="main-header-logo">
-        <a href="index.html" class="main-header-logo__link">
-          <img src="/img/logo.png" alt="" />
-          <span class="main-header-logo__link_txt">Пилигрим Карго</span>
-        </a>
-      </div>
-    
-      <div class="main-header-nav">
-        <nav class="main-header-nav__items">
-          <ul class="main-header-nav__links ul-reset">
-            <li class="main-header-nav__links_link select">
-              <div class="select__selectlink"> 
-                <div class="selectlink-control">Материалы</div>
-                <ul>
-                  <li><a href="">Щебень</a></li>
-                  <li><a href="">Песок</a></li>
-                  <li><a href="">ЩПС</a></li>
-                  <li><a href="">ПГС</a></li>
-                  <li><a href="">Отсев</a></li>
-                  <li><a href="">Керамзит</a></li>
-                  
-                </ul>
-              </div>
-            </li>
-            <li class="main-header-nav__links_link">
-              <a href="#">Доставка и оплата</a>
-            </li>
-            <li class="main-header-nav__links_link">
-              <a href="#">Контакты</a>
-            </li>
-            <li class="main-header-nav__links_link">
-              <a href="#">Вакансии</a>
-            </li>
-            
-          </ul>
-        </nav>
-      </div>
-    
-      <div class="main-header-phone">
-        <nav class="main-header-phone__items">
-          <ul class="main-header-phone__user ul-reset">
-            <li class="main-header-phone__user_item">
-              <a href="#">{% include 'parts/svgo/ico-phone.svg' %}</a>
-            </li>
-            <li class="main-header-phone__user_phone">
-              <a href="tel:+74951234567"> +7(495) 123-45-67 </a>
-            </li>
-            
-          </ul>
-        </nav>
-      </div>
+<header class="main-header animate__fadeInUp">
+  <div class="main-header__wrap wrapper">
+    <a href="index.html" class="main-header__logo-link">
+      <img 
+       class="main-header__logo-link_img"
+       src="img/logo.png"
+       alt="company logo"
+      />
+      <span class="main-header__logo-link_txt">Пилигрим Карго</span>
+    </a>
+
+    <nav class="main-header__nav main-navigation">
+      <ul class="main-navigation__links ul-reset">
+        <li class="main-navigation__item">
+          <div class="main-navigation__item_select selectlink">
+            <div class="selectlink-control">Материалы</div>
+            <ul>
+              <li><a href="#">Щебень</a></li>
+              <li><a href="#">Песок</a></li>
+              <li><a href="#">ЩПС</a></li>
+              <li><a href="#">ПГС</a></li>
+              <li><a href="#">Отсев</a></li>
+              <li><a href="#">Керамзит</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="main-navigation__item">
+          <a href="#" class="main-navigation__link">Доставка и оплата</a>
+        </li>
+        <li class="main-navigation__item">
+          <a href="#" class="main-navigation__link">Контакты</a>
+        </li>
+        <li class="main-navigation__item">
+          <a href="#" class="main-navigation__link">Вакансии</a>
+        </li>
+      </ul>
+
+      <ul class="main-navigation__links main-navigation__links_phone ul-reset">
+        <li class="main-navigation__item  item-tel">
+          <a href="#" class="main-navigation__item_icon item-tel__icon">
+            {% include 'parts/svgo/ico-phone.svg' %}
+          </a>
+        </li>
+        <li class="main-navigation__item">
+          <a href="tel:+74951234567" class="main-navigation__item_number">
+            +7 (495) 123-45-67
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- <button
+      class="main-header__btn animate__fadeIn btn-mobile"
+      aria-label="open the menu"
+    ></button> -->
   </div>
 </header>
