@@ -1,7 +1,7 @@
 .banner {
     margin: 0;
-    padding-top: 160px;
-    // margin-bottom: 100px;
+    padding-top: 100px;
+    
 }
 
 
@@ -24,15 +24,46 @@
         position: absolute;
         z-index: 1;
 
+        .media-range(@break_md; @break_lg; {
+            max-width: 600px;
+            // margin-top: 110px;
+            padding-left: 40px;
+        });
+
+        .media-range(@break_sm; @break_md; {
+            max-width: 500px;
+            // margin-top: 90px;
+            padding-left: 35px;
+        });
+
+        .media-range(@break_xs; @break_sm; {
+            max-width: 450px;
+            // margin-top: 80px;
+            padding-left: 30px;
+        });
+
         
     }
     &__h1 {
         font-family: 'Comfortaa';
         font-weight: 700;
-        font-size: 2.2em;
+        font-size: 2.5vw;
         text-shadow: 3px 3px 2px @fon;
         margin: 0;
         margin-bottom: 50px;
+
+        // .media-range(@break_md; @break_lg; {
+        //     font-size: 2.1vw;
+        // });
+
+        // .media-range(@break_sm; @break_md; {
+        //     font-size: 2vw;
+        //     text-shadow: 2px 2px 1px @fon;
+        // });
+        .media-max( 780px,{
+            font-size: 3vw;
+            text-shadow: 2px 2px 1px @fon;
+          });
     }
 
    
@@ -52,6 +83,26 @@
         outline: none;
         transition-duration: 0.3s;
 
+        // .media-range(@break_md; @break_lg; {
+        //     font-size: 1.1vw;
+        //     padding: 8px 24px;
+        //     line-height: 20px;
+        // });
+
+        // .media-range(@break_sm; @break_md; {
+        //     font-size: 0.9vw;
+        //     padding: 6px 18px;
+        //     line-height: 16px;
+        //     border-radius: 4px;
+        // });
+
+       
+        .media-max( 780px,{
+            font-size: 1.5vw;
+            padding: 6px 18px;
+            line-height: 16px;
+            border-radius: 4px;
+          });
     }
 
     &__btn:hover,
@@ -70,9 +121,23 @@
 
     &__imeg {
         position: relative;
-        left: 305px;
+        left: 20vw;
         max-width: 800px;
-        // height: 500px;
+        
+        .media-range(@break_md; @break_lg; {
+            max-width: 700px;
+            // left: 200px;
+        });
+
+        .media-range(@break_sm; @break_md; {
+            max-width: 650px;
+            // left: 100px;
+        });
+
+        .media-range(@break_xs; @break_sm; {
+            max-width: 550px;
+            left: 10vw;
+        });
     }
 
     

@@ -2,16 +2,30 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    position: fixed;
-    z-index: 5;
+    // position: fixed;
+    // z-index: 1;
     padding-top: 10px;
     background-color: @h-der;
 
+    // .media-max( 520px,{
+    //     padding-top: 30px;
+    //   });
+
+
+    &.scrolled{
+        position: fixed;
+        top: 0;
+        background-color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        z-index: 15;
+      }
     &__wrap {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
-        
+        align-items: center;
+        top: 0;
+        left: 0;
     }
 
     &__logo-link {
@@ -27,30 +41,42 @@
 
         &_img {
             max-width: 50px;
+
+            .media-range(@break_md; @break_lg; {
+                max-width: 40px;
+            });
+
+            .media-range(@break_sm; @break_md; {
+                max-width: 30px;
+            }
+
+        );
         }
 
         &_txt {
-            font-size: 1.6vw;
+            font-size: 1.8vw;
             font-family: 'Comfortaa';
             font-weight: 700;
 
             .media-range(@break_md; @break_lg; {
-                    font-size: 2vw;
+                    font-size: 1.6vw;
                 }
 
             );
 
             .media-range(@break_sm; @break_md; {
-                    font-size: 2.4vw;
+                    font-size: 1.4vw;
                 }
 
             );
         }
     }
-}
+
+    
 
 .main-header__logo-link:hover {
     box-shadow: inset 4px 4px 2px #989a9c;
+}
 }
 
 .main-navigation {
@@ -60,6 +86,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    .media-max( 780px,{
+        display: none;
+      });
 
     &__links {
         margin: 0;
@@ -82,17 +112,31 @@
             font-size: 1.6vw;
 
             .media-range(@break_md; @break_lg; {
-                    font-size: 1.9vw;
-                }
-
-            );
+                    font-size: 1.4vw;
+                });
 
             .media-range(@break_sm; @break_md; {
-                    font-size: 2.3vw;
-                }
-
-            );
+                    font-size: 1.2vw;
+                });
         }
+
+        // &.item-active{
+        //     border-bottom: 1px solid @colorHoverLine;
+        //   } 
+
+        //   &::after {
+        //     content: "";
+        //     display: block;
+        //     width: 0;
+        //     border-bottom: 1px solid @colorHoverLine;
+        //   }
+          
+          
+        //   &:hover::after,
+        //   &:active::after{
+        //     width: 100%;
+        //     transition: width @transT;
+        //   }
     }
 
     &__item:hover {
@@ -104,13 +148,13 @@
         font-size: 1.3vw;
 
         .media-range(@break_md; @break_lg; {
-                font-size: 1.6vw;
+                font-size: 1.2vw;
             }
 
         );
 
         .media-range(@break_sm; @break_md; {
-                font-size: 2vw;
+                font-size: 0.9vw;
             }
 
         );
@@ -163,16 +207,12 @@
                 color: #000;
 
                 .media-range(@break_md; @break_lg; {
-                        font-size: 1.5vw;
-                    }
-
-                );
+                        font-size: 1vw;
+                    });
 
                 .media-range(@break_sm; @break_md; {
-                        font-size: 1.9vw;
-                    }
-
-                );
+                        font-size: 0.8vw;
+                    });
 
 
             }
@@ -190,16 +230,12 @@
             cursor: pointer;
 
             .media-range(@break_md; @break_lg; {
-                    font-size: 1.6vw;
-                }
-
-            );
+                    font-size: 1.1vw;
+                });
 
             .media-range(@break_sm; @break_md; {
-                    font-size: 2vw;
-                }
-
-            );
+                    font-size: 0.9vw;
+                });
         }
 
         .selectlink-control::after {
@@ -213,6 +249,21 @@
         }
     }
 
+    &.is-open {
+        opacity: 0.98;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        background-color: gray;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+    }
+
     
 }
 
@@ -223,6 +274,16 @@
 .item-tel__icon {
     svg{
         width: 15px;
+
+        // .media-range(@break_md; @break_lg; {
+        //     width: 12px;
+        // });
+
+        .media-range(@break_sm; @break_md; {
+            width: 12px;
+        });
+
+    
     }
 }
 

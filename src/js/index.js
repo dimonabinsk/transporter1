@@ -12,14 +12,14 @@ let wow = new WOW({
 });
 wow.init();
 
-let header = document.querySelector(".main-header");
-function stickyHeader() {
-  if (window.scrollY > 500) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-}
+// let header = document.querySelector(".main-header");
+// function stickyHeader() {
+//   if (window.scrollY > 500) {
+//     header.classList.add("scrolled");
+//   } else {
+//     header.classList.remove("scrolled");
+//   }
+// }
 
 function throttle(func, time) {
     let isThrottled = false;
@@ -48,6 +48,8 @@ $('a[href*="#"]').click(function () {
   return false;
 });
 
+// Выпадающий список
+
 $(function() {
 	$(".selectlink-control").click(function(){
 		var $menu_popup = $(this).next();
@@ -70,34 +72,57 @@ $(function() {
 	});
 });
 
-// let mobileBtn = document.querySelector(".btn-mobile");
-// let headerNav = document.querySelector(".main-header__nav");
-// function mobileMenuOpen() {
-//   mobileBtn.classList.add("is-open");
-//   mobileBtn.classList.add("animate__animated");
-//   headerNav.classList.add("is-open");
-//   headerNav.classList.add("animate__animated");
-//   document.body.classList.add("ov-h");
-// }
+// Гамбургер
 
-// function mobileMenuClose() {
-//   document.body.classList.remove("ov-h");
-//   mobileBtn.classList.remove("is-open");
-//   mobileBtn.classList.remove("animate__animated");
-//   headerNav.classList.remove("is-open");
-//   headerNav.classList.remove("animate__animated");
-// }
+let mobileBtn = document.querySelector(".btn-mobile");
+let headerNav = document.querySelector(".main-header__nav");
+function mobileMenuOpen() {
+  mobileBtn.classList.add("is-open");
+  mobileBtn.classList.add("animate__animated");
+  headerNav.classList.add("is-open");
+  headerNav.classList.add("animate__animated");
+  document.body.classList.add("ov-h");
+}
 
-// mobileBtn.addEventListener("click", function (e) {
-//   if (mobileBtn.classList.contains("is-open")) {
-//     mobileMenuClose();
-//   } else {
-//     mobileMenuOpen();
-//   }
-// });
+function mobileMenuClose() {
+  document.body.classList.remove("ov-h");
+  mobileBtn.classList.remove("is-open");
+  mobileBtn.classList.remove("animate__animated");
+  headerNav.classList.remove("is-open");
+  headerNav.classList.remove("animate__animated");
+}
 
-// headerNav.addEventListener("click", () => {
-//   if (headerNav.classList.contains("is-open")) {
-//     mobileMenuClose();
-//   }
-// });
+mobileBtn.addEventListener("click", function (e) {
+  if (mobileBtn.classList.contains("is-open")) {
+    mobileMenuClose();
+  } else {
+    mobileMenuOpen();
+  }
+});
+
+headerNav.addEventListener("click", () => {
+  if (headerNav.classList.contains("is-open")) {
+    mobileMenuClose();
+  }
+});
+
+
+
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    // modalClose();
+    mobileMenuClose();
+  }
+});
+
+// Скролл шапки
+
+let header = document.querySelector(".main-header");
+function stickyHeader() {
+  if (window.scrollY > 500) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+}
