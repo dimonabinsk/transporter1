@@ -1,7 +1,14 @@
 .work {
   .size(6);
   .col();
-  margin-top: 70px;
+ 
+
+  .media-max( 780px,{
+    .size(12);
+    .col();
+    // width: 100%;
+    // .wrapper();
+  });
 
   &-wrap {
     position: relative;
@@ -14,6 +21,7 @@
 
   &__img {
     opacity: 0.8;
+    
   }
 
   &__txt {
