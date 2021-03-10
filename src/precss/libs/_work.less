@@ -1,55 +1,151 @@
 .work {
   .size(6);
   .col();
- 
+  position: relative;
+  z-index: 10;
+  height: 270px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
 
-  .media-max( 780px,{
-    .size(12);
-    .col();
-    // width: 100%;
-    // .wrapper();
-  });
-
-  &-wrap {
-    position: relative;
-    max-height: 270px;
-    overflow: hidden;
-    border-radius: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
     background: #000;
-    margin-bottom: 20px;
+    opacity: 0.4;
   }
 
-  &__img {
-    opacity: 0.8;
-    
-  }
+  .media-max(780px, {
+      .size(12);
+      .col();
+      
+    }
+
+  );
 
   &__txt {
     position: absolute;
-    left: 160px;
-    top: 70px;
-    font-family: "Comfortaa";
-    font-weight: 700;
-    font-size: 2.8vw;
+    top: 25%;
+    left: 35%;
+    font-size: 24px;
+    padding: 0 20px;
     color: #fff;
     text-shadow: 2px 2px 1px #000;
-    max-width: 350px;
   }
 
   &__icon {
     position: absolute;
-    left: 50px;
-
-    top: 80px;
+    top: 35%;
+    left: 20%;
 
     svg {
-      width: 80px;
-      height: 80px;
+      height: 60px;
+      width: 60px;
 
       path {
         fill: #fff;
-        
       }
     }
   }
+}
+
+.img-truck::after {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/img/truck.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .media-max(780px, {
+      background-position: 0px -40px;
+    }
+
+  );
+
+  .media-max(560px, {
+      background-position: 0px;
+    }
+
+  );
+}
+
+.img-calck::after {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/img/photo_calck.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .media-max(780px, {
+      background-position: 0px -40px;
+    }
+
+  );
+
+  .media-max(560px, {
+      background-position: 0px;
+    }
+
+  );
+}
+
+.img-manWhite::after {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/img/manWhite.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-manRed::after {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/img/manRed.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .media-max(780px, {
+      background-position: 0px -40px;
+    }
+
+  );
+
+  .media-max(560px, {
+      background-position: 0px;
+    }
+
+  );
 }

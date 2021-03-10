@@ -79,12 +79,16 @@ let headerNav = document.querySelector(".main-header__nav");
 function mobileMenuOpen() {
   mobileBtn.classList.add("is-open");
   mobileBtn.classList.add("animate__animated");
+  mobileBtn.classList.remove("is-close");
   headerNav.classList.add("is-open");
   headerNav.classList.add("animate__animated");
+  headerNav.classList.remove("is-close");
   document.body.classList.add("ov-h");
 }
 
 function mobileMenuClose() {
+  mobileBtn.classList.add("is-close");
+  headerNav.classList.add("is-close");
   document.body.classList.remove("ov-h");
   mobileBtn.classList.remove("is-open");
   mobileBtn.classList.remove("animate__animated");
@@ -92,17 +96,27 @@ function mobileMenuClose() {
   headerNav.classList.remove("animate__animated");
 }
 
+function mobileClose ()
+{
+  mobileBtn.classList.remove("is-close");
+  headerNav.classList.remove("is-close");
+}
+
+
 mobileBtn.addEventListener("click", function (e) {
   if (mobileBtn.classList.contains("is-open")) {
     mobileMenuClose();
+    setTimeout(mobileClose,900);
   } else {
     mobileMenuOpen();
   }
 });
 
+
 headerNav.addEventListener("click", () => {
   if (headerNav.classList.contains("is-open")) {
     mobileMenuClose();
+    setTimeout(mobileClose,900);
   }
 });
 
@@ -110,8 +124,11 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     // modalClose();
     mobileMenuClose();
+    setTimeout(mobileClose,900);
   }
 });
+
+
 
 // Скролл шапки
 

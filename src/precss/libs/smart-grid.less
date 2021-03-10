@@ -5,6 +5,7 @@
 @break_md: 960px;
 @break_sm: 780px;
 @break_xs: 560px;
+@break_xss: 420px;
 
 @offset: 20px;
 @offset_lg: @offset;
@@ -105,6 +106,11 @@
 .size-xs(@n){
     @val: 100% / @columns * @n;
     .xs(width, ~"calc(@{val} - @{offset_xs})");
+}
+
+.size-xss(@n){
+    @val: 100% / @columns * @n;
+    .xss(width, ~"calc(@{val} - @{offset_xs})");
 }
 
 .shift(@n){
